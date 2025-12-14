@@ -36,6 +36,7 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "dist/lotus-legacy-front",
               "budgets": [
                 {
                   "type": "initial",
@@ -93,6 +94,9 @@
               "src/styles.scss"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
