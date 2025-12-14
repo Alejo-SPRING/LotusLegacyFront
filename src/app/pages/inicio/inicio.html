@@ -1,0 +1,109 @@
+<div class="container-fluid px-4 py-5">
+  <div class="my-5 py-5 container text-light">
+    <h1 class="display-5 fw-bold py-4 border-bottom">
+      <i class="fa-solid fa-hand-peace tc-1"></i>Bienvenidos ninjas a Lotus Legacy
+    </h1>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <p class="lead mb-4">
+          Si quieres ser parte de nuestra familia, puedes ingresar a nuestro canal de
+          <a href="https://discord.gg/PW5vF2fw" target="_blank" class="btn text-danger"
+            ><i class="fa-brands fa-discord"></i>Discord</a
+          >
+          para obtener más información sobre los cupos y reglas para ingresar.
+        </p>
+      </div>
+      <h5 class="text-center">
+        <i class="fa-solid fa-star tc-1"></i>¡Lotus Legacy, unidos hacia la victoria!<i
+          class="fa-solid fa-star tc-1"
+        ></i>
+      </h5>
+      <a
+        href="https://discord.gg/PW5vF2fw"
+        target="_blank"
+        class="btn text-light"
+        rel="facebook ggame"
+        ><i class="fa-brands fa-discord tc-1"></i> Lotus Legacy</a
+      >
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 middle-wrapper">
+        <ngb-carousel
+          #carousel
+          [interval]="5000"
+          [pauseOnHover]="true"
+          [pauseOnFocus]="true"
+          (slide)="onSlide($event)"
+        >
+          @for (slide of slides; track slide; let i = $index) {
+          <ng-template ngbSlide>
+            <div class="carousel-caption text-light">
+              <h3 class="fw-bold">{{ slide.title }}</h3>
+              <p class="text-break fs-4 fw-bold">
+                {{ slide.message }}
+              </p>
+            </div>
+            <div class="picsum-img-wrapper d-flex justify-content-center">
+              <img
+                [src]="slide.img"
+                class="img-fluid"
+                style="height: 60vh; object-fit: cover"
+                alt="My image description"
+              />
+            </div>
+          </ng-template>
+          }
+        </ngb-carousel>
+      </div>
+      <div class="col-12 mt-3">
+        <div class="card card-body bg-2 rounded-0 rounded-bottom">
+          <div class="row">
+            <div class="col-12 col-md-6 d-flex align-items-center">
+              <div class="p-5 text-light">
+                <h1 class="display-5"><i class="fa-solid fa-link"></i> Links de interés</h1>
+                <p>
+                  Encuentra guias e información de efectos, habilidades de pets y entre otros...
+                </p>
+                <div class="list-group">
+                  <a
+                    href="https://nm-stats-simulator.vercel.app/"
+                    target="_blank"
+                    class="list-group-item list-group-item-action bg-3 text-light"
+                    aria-current="true"
+                  >
+                    <i class="fa-regular fa-id-card"></i> Simulador de estadísticas
+                  </a>
+                  <a
+                    href="https://nm-kekkai-solver.netlify.app/"
+                    target="_blank"
+                    class="list-group-item list-group-item-action bg-3 text-light"
+                    ><i class="fa-solid fa-list-check"></i> Kekkai solver</a
+                  >
+                  <a
+                    href="https://ninjamaster.rpg-board.net/t6-infostatus-effects-and-debuffs?highlight=effects"
+                    target="_blank"
+                    class="list-group-item list-group-item-action bg-3 text-light"
+                    ><i class="fa-solid fa-clipboard-check"></i> Efectos</a
+                  >
+                  <a
+                    href="https://ninjamaster.rpg-board.net/t748-infopets-information-updated"
+                    target="_blank"
+                    class="list-group-item list-group-item-action bg-3 text-light"
+                    ><i class="fa-solid fa-cat"></i> Información de pets</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-12 d-md-block d-none col-md-6">
+              <div class="d-flex justify-content-center">
+                <img width="70%" src="./imgs/banda.jpg" class="img-fluid" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

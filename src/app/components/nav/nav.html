@@ -1,0 +1,40 @@
+<nav class="nav nav-custom bg-4 fixed-top justify-content-between" #nav>
+  <div class="nav-item p-2">
+    <a routerLink="/" class="btn"
+      ><h5 class="text-light mt-2"><i class="fa-solid fa-skull tc-2"></i> Lotus Legacy</h5></a
+    >
+  </div>
+  <div class="nav-item">
+    <button type="button" (click)="openMenu(menu)" class="btn btn-lg border-0 mt-2">
+      <i class="fa-solid fa-bars tc-1"></i>
+    </button>
+  </div>
+</nav>
+<ng-template #menu let-modal>
+  <div class="modal-body bg-4 text-light">
+    <button type="button" (click)="modal.close()" class="btn rounded-circle float-end border-0">
+      <i class="fa-solid fa-x tc-1"></i>
+    </button>
+    <h1><i class="fa-solid fa-bars tc-1"></i> Menu</h1>
+    <div class="container py-5">
+      <div class="list-group mt-5">
+        <button
+          routerLink="/inicio"
+          (click)="modal.close()"
+          routerLinkActive="tc-1"
+          class="list-group-item h2 border-0 text-center bg-4 text-light"
+        >
+          <i class="fa-solid fa-house tc-1"></i> Inicio
+        </button>
+        <button
+          routerLink="/members"
+          (click)="modal.close()"
+          routerLinkActive="tc-1"
+          class="list-group-item h2 border-0 text-center bg-4 text-light"
+        >
+          <i class="fa-solid fa-users tc-1"></i> Miembros
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>

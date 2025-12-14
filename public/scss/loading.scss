@@ -1,0 +1,63 @@
+// Variables
+$kunai-size: 300px;
+$overlay-bg: rgba(0, 0, 0, 0.8); // Negro con 90% de opacidad
+$kunai-color: #ff0000; // Color del icono (rojo)
+
+// ------------------------------------------
+// ESTILO 1: EL OVERLAY (Capa de Bloqueo)
+// ------------------------------------------
+#loading-overlay {
+  position: fixed; // Permite que cubra toda la ventana del navegador
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  // Color oscuro semitransparente
+  background-color: $overlay-bg;
+
+  // Z-Index: CRUCIAL para bloquear clics
+  // Asegura que esté por encima de casi todo lo demás en la página.
+  z-index: 9999;
+
+  // Centrado Flexbox: Centra el icono en el centro de la pantalla
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Inicialmente oculto (manejar con TypeScript/clase)
+  // display: none;
+}
+
+// ------------------------------------------
+// ESTILO 2: EL ICONO DE CARGA (Kunai)
+// ------------------------------------------
+.kunai-loader {
+  width: $kunai-size;
+  height: $kunai-size;
+
+  // Efecto visual (opcional)
+  filter: drop-shadow(0 0 10px $kunai-color);
+
+  // Animación de rotación (la definimos abajo)
+  animation: kunai-spin 1s linear infinite;
+
+  // Si usas el SVG en línea, puedes cambiar el color de esta manera:
+  path {
+    fill: $kunai-color;
+  }
+}
+
+// ------------------------------------------
+// 3. KEYFRAMES DE LA ANIMACIÓN
+// ------------------------------------------
+@keyframes kunai-spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.8;
+  }
+}
