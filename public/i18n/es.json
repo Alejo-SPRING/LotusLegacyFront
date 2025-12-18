@@ -1,0 +1,57 @@
+{
+    "nav": {
+        "langages-btns": {
+            "es": "Español",
+            "en": "Ingles"
+        },
+        "menu": {
+            "title": "Menu",
+            "btns": {
+                "home": "Inicio",
+                "members": "Miembros"
+            }
+        }
+    },
+    "home": {
+        "title": "Bienvenidos ninjas a Lotus Legacy",
+        "message": {
+            "1": "Si quieres ser parte de nuestra familia, puedes ingresar a nuestro canal de",
+            "2": "para obtener más información sobre los cupos y reglas para ingresar.",
+            "3": "¡Lotus Legacy, unidos hacia la victoria!"
+        },
+        "slides": {
+            "1": {
+                "title": "¡Eventos y rifas del clan!",
+                "message": "Participa en nuestros eventos o rifas y gana jutsus, tokens y más."
+            },
+            "2": {
+                "title": "Guild war",
+                "message": "Donar activamente 3K de proviciones diarias y participar activamente en la guerra."
+            }
+        },
+        "interest": {
+            "title": "Links de interés",
+            "subtitle": "Encuentra guias e información de efectos, habilidades de pets y entre otros...",
+            "btns": {
+                "1": "Simulador de estadísticas",
+                "2": "Efectos",
+                "3": "Información de pets"
+            }
+        }
+    },
+    "footer": {
+        "message": {
+            "1": "Hecho con el",
+            "2": "por"
+        }
+    },
+    "members": {
+        "title": "Miembros",
+        "subtitle": "Acá encontraras a todos los locos enfermos del clan, que farmean sin parar.",
+        "card": {
+            "labels": {
+                "1": "Nombre"
+            }
+        }
+    }
+}

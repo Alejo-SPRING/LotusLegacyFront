@@ -5,6 +5,31 @@
     >
   </div>
   <div class="nav-item">
+    <div ngbDropdown class="d-inline-block">
+      <button type="button" class="btn btn-lg border-0 mt-2" ngbDropdownToggle>
+        <img
+          [src]="langSelect === 'es' ? '/imgs/flag-spanish.png' : '/imgs/flag-united-states.png'"
+          alt=""
+          class="img-fluid"
+          style="max-width: 30px"
+        />
+      </button>
+      <div ngbDropdownMenu class="bg-4">
+        <button ngbDropdownItem class="tc-1" (click)="changeLang('es')">
+          <img src="/imgs/flag-spanish.png" alt="" class="img-fluid" style="max-width: 30px" />
+          {{ 'nav.langages-btns.es' | transloco }}
+        </button>
+        <button ngbDropdownItem class="tc-1" (click)="changeLang('en')">
+          <img
+            src="/imgs/flag-united-states.png"
+            alt=""
+            class="img-fluid"
+            style="max-width: 30px"
+          />
+          {{ 'nav.langages-btns.en' | transloco }}
+        </button>
+      </div>
+    </div>
     <button type="button" (click)="openMenu(menu)" class="btn btn-lg border-0 mt-2">
       <i class="fa-solid fa-bars tc-1"></i>
     </button>
@@ -15,7 +40,7 @@
     <button type="button" (click)="modal.close()" class="btn rounded-circle float-end border-0">
       <i class="fa-solid fa-x tc-1"></i>
     </button>
-    <h1><i class="fa-solid fa-bars tc-1"></i> Menu</h1>
+    <h1><i class="fa-solid fa-bars tc-1"></i> {{ 'nav.menu.title' | transloco }}</h1>
     <div class="container py-5">
       <div class="list-group mt-5">
         <button
@@ -24,7 +49,7 @@
           routerLinkActive="tc-1"
           class="list-group-item h2 border-0 text-center bg-4 text-light"
         >
-          <i class="fa-solid fa-house tc-1"></i> Inicio
+          <i class="fa-solid fa-house tc-1"></i> {{ 'nav.menu.btns.home' | transloco }}
         </button>
         <button
           routerLink="/members"
@@ -32,7 +57,7 @@
           routerLinkActive="tc-1"
           class="list-group-item h2 border-0 text-center bg-4 text-light"
         >
-          <i class="fa-solid fa-users tc-1"></i> Miembros
+          <i class="fa-solid fa-users tc-1"></i> {{ 'nav.menu.btns.members' | transloco }}
         </button>
       </div>
     </div>

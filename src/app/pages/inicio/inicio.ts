@@ -7,10 +7,11 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { Slide } from '../../core/objects/slide';
 import { SlideService } from '../../core/services/slide.service';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-inicio',
-  imports: [NgbCarousel, NgbSlide],
+  imports: [NgbCarousel, NgbSlide, TranslocoModule],
   templateUrl: './inicio.html',
   styleUrl: './inicio.scss',
 })

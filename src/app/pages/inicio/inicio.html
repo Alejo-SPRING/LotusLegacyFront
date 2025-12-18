@@ -1,22 +1,21 @@
 <div class="container-fluid px-4 py-5">
   <div class="my-5 py-5 container text-light">
     <h1 class="display-5 fw-bold py-4 border-bottom">
-      <i class="fa-solid fa-hand-peace tc-1"></i>Bienvenidos ninjas a Lotus Legacy
+      <i class="fa-solid fa-hand-peace tc-1"></i>{{ 'home.title' | transloco }}
     </h1>
     <div class="row mt-4">
       <div class="col-md-6">
         <p class="lead mb-4">
-          Si quieres ser parte de nuestra familia, puedes ingresar a nuestro canal de
+          {{ 'home.message.1' | transloco }}
           <a href="https://discord.gg/PW5vF2fw" target="_blank" class="btn text-danger"
             ><i class="fa-brands fa-discord"></i>Discord</a
           >
-          para obtener más información sobre los cupos y reglas para ingresar.
+          {{ 'home.message.2' | transloco }}
         </p>
       </div>
       <h5 class="text-center">
-        <i class="fa-solid fa-star tc-1"></i>¡Lotus Legacy, unidos hacia la victoria!<i
-          class="fa-solid fa-star tc-1"
-        ></i>
+        <i class="fa-solid fa-star tc-1"></i>{{ 'home.message.3' | transloco
+        }}<i class="fa-solid fa-star tc-1"></i>
       </h5>
       <a
         href="https://discord.gg/PW5vF2fw"
@@ -62,9 +61,11 @@
           <div class="row">
             <div class="col-12 col-md-6 d-flex align-items-center">
               <div class="p-5 text-light">
-                <h1 class="display-5"><i class="fa-solid fa-link"></i> Links de interés</h1>
+                <h1 class="display-5">
+                  <i class="fa-solid fa-link"></i> {{ 'home.interest.title' | transloco }}
+                </h1>
                 <p>
-                  Encuentra guias e información de efectos, habilidades de pets y entre otros...
+                  {{ 'home.interest.subtitle' | transloco }}
                 </p>
                 <div class="list-group">
                   <a
@@ -73,7 +74,7 @@
                     class="list-group-item list-group-item-action bg-3 text-light"
                     aria-current="true"
                   >
-                    <i class="fa-regular fa-id-card"></i> Simulador de estadísticas
+                    <i class="fa-regular fa-id-card"></i> {{ 'home.interest.btns.1' | transloco }}
                   </a>
                   <a
                     href="https://nm-kekkai-solver.netlify.app/"
@@ -85,13 +86,14 @@
                     href="https://ninjamaster.rpg-board.net/t6-infostatus-effects-and-debuffs?highlight=effects"
                     target="_blank"
                     class="list-group-item list-group-item-action bg-3 text-light"
-                    ><i class="fa-solid fa-clipboard-check"></i> Efectos</a
+                    ><i class="fa-solid fa-clipboard-check"></i>
+                    {{ 'home.interest.btns.2' | transloco }}</a
                   >
                   <a
                     href="https://ninjamaster.rpg-board.net/t748-infopets-information-updated"
                     target="_blank"
                     class="list-group-item list-group-item-action bg-3 text-light"
-                    ><i class="fa-solid fa-cat"></i> Información de pets</a
+                    ><i class="fa-solid fa-cat"></i> {{ 'home.interest.btns.3' | transloco }}</a
                   >
                 </div>
               </div>

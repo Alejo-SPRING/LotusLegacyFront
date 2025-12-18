@@ -1,12 +1,12 @@
 <div class="container-fluid px-4 py-5 bg-4">
   <div class="my-5 py-5 container">
     <h1 class="display-5 fw-bold text-light py-4 border-bottom">
-      <i class="fa-solid fa-users tc-1"></i> Miembros
+      <i class="fa-solid fa-users tc-1"></i> {{ 'members.title' | transloco }}
     </h1>
     <div class="row mt-4">
       <div class="col-md-6">
         <p class="lead mb-4 text-light">
-          Acá encontraras a todos los locos enfermos del clan, que farmean sin parar.
+          {{ 'members.subtitle' | transloco }}
         </p>
       </div>
     </div>
@@ -20,7 +20,12 @@
         <div class="col">
           <div class="card bg-4 text-light border-0" style="max-width: 340px">
             <div class="position-relative">
-              <img [src]="member.img" class="card-img-top" style="max-height: 520px" alt="imagen" />
+              <img
+                [src]="member.img"
+                class="card-img-top"
+                style="max-height: 520px; min-height: 520px"
+                alt="imagen"
+              />
               <div
                 class="badge position-absolute top-0 end-0 m-2"
                 [ngClass]="{
@@ -35,7 +40,10 @@
               </div>
             </div>
             <div class="card-body d-flex justify-content-between">
-              <p><span class="fw-bold">Nombre: </span>{{ member.name }}</p>
+              <p>
+                <span class="fw-bold">{{ 'members.card.labels.1' | transloco }}: </span
+                >{{ member.name }}
+              </p>
               <p><span class="fw-bold">Lvl: </span>{{ member.lvl }}</p>
               <p><span class="fw-bold">Id: </span>{{ member.id }}</p>
             </div>

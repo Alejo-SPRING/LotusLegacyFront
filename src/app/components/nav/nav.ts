@@ -1,10 +1,11 @@
 import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
+import { NgbDropdownModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-nav',
-  imports: [RouterModule],
+  imports: [RouterModule, NgbDropdownModule, TranslocoModule],
   templateUrl: './nav.html',
   styleUrl: './nav.scss',
 })
@@ -12,16 +13,37 @@ export class Nav {
   @ViewChild('nav')
   public nav: ElementRef;
   private scrollOldPosition: number = 0;
+  public langSelect: string = 'es';
 
-  constructor(private render: Renderer2, private ngbModal: NgbModal, private router: Router) {}
+  constructor(
+    private render: Renderer2,
+    private ngbModal: NgbModal,
+    private router: Router,
+    private transLocoService: TranslocoService
+  ) {}
 
   ngOnInit(): void {
+    this.loadLang();
     this.router.events.subscribe((response) => {
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
       });
     });
+  }
+
+  public changeLang(lang: string): void {
+    this.langSelect = lang;
+    localStorage.setItem('langSelect', lang);
+    this.transLocoService.setActiveLang(lang);
+  }
+
+  private loadLang(): void {
+    let lang: string | null = localStorage.getItem('langSelect');
+    if (lang !== null) {
+      this.langSelect = lang;
+      this.changeLang(lang);
+    }
   }
 
   @HostListener('window:scroll', ['$event'])

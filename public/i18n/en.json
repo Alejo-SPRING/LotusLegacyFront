@@ -1,0 +1,57 @@
+{
+    "nav": {
+        "langages-btns": {
+            "es": "Spanish",
+            "en": "English"
+        },
+        "menu": {
+            "title": "Menu",
+            "btns": {
+                "home": "Start",
+                "members": "Members"
+            }
+        }
+    },
+    "home": {
+        "title": "Welcome, ninjas of Lotus Legacy",
+        "message": {
+            "1": "If you want to be part of our family, you can enter our channel",
+            "2": "for more information about quotas and entry rules.",
+            "3": "¡Lotus Legacy, united towards victory!"
+        },
+        "slides": {
+            "1": {
+                "title": "¡Clan events and raffles!",
+                "message": "Participate in our events or raffles and win jutsus, tokens and more."
+            },
+            "2": {
+                "title": "Guild war",
+                "message": "Actively donate 3K of daily supplies and actively participate in the war."
+            }
+        },
+        "interest": {
+            "title": "Links of interest",
+            "subtitle": "Find guides and information on effects, pet abilities and among others...",
+            "btns": {
+                "1": "Statistics simulator",
+                "2": "Effects",
+                "3": "Pet information"
+            }
+        }
+    },
+    "footer": {
+        "message": {
+            "1": "Made with the",
+            "2": "by"
+        }
+    },
+    "members": {
+        "title": "Members",
+        "subtitle": "Here you will find all the sick crazy people in the clan, who farm non-stop.",
+        "card": {
+            "labels": {
+                "1": "Name"
+            }
+        }
+    }
+}

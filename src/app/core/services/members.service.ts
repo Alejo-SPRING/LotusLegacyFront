@@ -12,7 +12,7 @@ export class MembersService {
     return [
       {
         id: 'N/A',
-        img: this.baseUrl + 'pj.png',
+        img: this.baseUrl + 'kaeth.png',
         lvl: 60,
         name: 'LF_KAETH',
         rank: Rank.LEADER,
@@ -33,7 +33,7 @@ export class MembersService {
       },
       {
         id: 'N/A',
-        img: this.baseUrl + 'pj.png',
+        img: this.baseUrl + 'kasanova.png',
         lvl: 90,
         name: 'LL_Kasanova',
         rank: Rank.ELDER,
@@ -61,7 +61,7 @@ export class MembersService {
       },
       {
         id: 'N/A',
-        img: this.baseUrl + 'pj.png',
+        img: this.baseUrl + 'indra.png',
         lvl: 90,
         name: 'LL_Indra',
         rank: Rank.CO_LEADER,
