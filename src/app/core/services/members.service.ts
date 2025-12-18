@@ -82,14 +82,14 @@ export class MembersService {
       },
       {
         id: 'N/A',
-        img: this.baseUrl + 'pj.png',
+        img: this.baseUrl + 'patron.png',
         lvl: 90,
         name: 'Patron507',
         rank: Rank.MEMBER,
       },
       {
         id: 'N/A',
-        img: this.baseUrl + 'pj.png',
+        img: this.baseUrl + 'junior.png',
         lvl: 90,
         name: 'Juniorjsl',
         rank: Rank.ELDER,
