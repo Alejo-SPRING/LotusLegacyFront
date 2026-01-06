@@ -10,4 +10,8 @@ export const routes: Routes = [
     path: 'members',
     loadComponent: () => import('./pages/members/members').then((c) => c.Members),
   },
+  {
+    path: 'tier-lists',
+    loadComponent: () => import('./pages/tier-lists/tier-lists').then((c) => c.TierLists),
+  },
 ];

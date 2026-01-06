@@ -53,5 +53,19 @@
                 "1": "Name"
             }
         }
+    },
+    "tier-lists": {
+        "subtitle": "Classifications of jutsus, clothing and other elements so you can prioritize which objects are better than others.",
+        "by": "By",
+        "card": {
+            "1": {
+                "title": "Tier clothes",
+                "description": "Top clothing to purchase in game packs."
+            },
+             "2": {
+                "title": "Tier dispersible jutsus",
+                "description": "Top of the best dispersible jutsus."
+            }
+        }
     }
 }

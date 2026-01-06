@@ -1,0 +1,32 @@
+<div class="container-fluid px-4 py-5 bg-4">
+  <div class="my-5 py-5 container">
+    <h1 class="display-5 fw-bold text-light py-4 border-bottom">
+      <i class="fa-solid fa-list tc-1"></i> Tier Lists
+    </h1>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <p class="lead mb-4 text-light">
+          {{ 'tier-lists.subtitle' | transloco }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  @for (tier of tierLists; track $index) {
+  <div class="card bg-4 mt-3">
+    <div class="card-header">
+      <h3 class="card-title text-light py-3">
+        <i [class]="'fa-solid ' + tier.icon"></i> {{ tier.title }}
+      </h3>
+    </div>
+    <div class="card-body">
+      <p class="text-light">{{ tier.description }}</p>
+      <a [href]="tier.byUrl" target="_blank" class="text-light d-flex float-end"
+        >{{ 'tier-lists.by' | transloco }} {{ tier.byName }}</a
+      >
+      <img [src]="tier.img" alt="tier ropa" class="img-fluid mt-2" />
+    </div>
+  </div>
+  }
+</div>

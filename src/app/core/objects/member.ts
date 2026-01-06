@@ -1,5 +1,3 @@
-import { Rank } from './rank';
-
 export interface Member {
   name: string;
   lvl: number;
