@@ -53,5 +53,20 @@
                 "1": "Nombre"
             }
         }
+    },
+    "tier-lists": {
+        "title": "Tier ropa",
+        "subtitle": "Clasificaciones de jutsus, ropa y entre otros elementos para que priorices que objetos son mejores que otros.",
+        "by": "Hecho por",
+        "card": {
+            "1": {
+                "title": "Tier ropa",
+                "description": "Top de ropa para comprar en paquetes del juego."
+            },
+            "2": {
+                "title": "Tier jutsus disperse",
+                "description": "Top de los mejores jutsus dispersables."
+            }
+        }
     }
 }
