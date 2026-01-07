@@ -26,6 +26,46 @@ export class TierlistService {
         byUrl: 'https://www.facebook.com/yanuar.a.saputra.9',
         img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767725125/tier-lists/tier-disperse-jutsu_d8jii8.jpg',
       },
+      {
+        title: this.transLocoService.translate('tier-lists.card.3.title'),
+        icon: 'fa-fire',
+        description: this.transLocoService.translate('tier-lists.card.3.description'),
+        byName: 'Yanuar',
+        byUrl: 'https://www.facebook.com/yanuar.a.saputra.9',
+        img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767742848/tier-lists/tier-jutsu-boss_lhzmlm.jpg',
+      },
+      {
+        title: this.transLocoService.translate('tier-lists.card.4.title'),
+        icon: 'fa-ring',
+        description: this.transLocoService.translate('tier-lists.card.4.description'),
+        byName: 'Yanuar',
+        byUrl: 'https://www.facebook.com/yanuar.a.saputra.9',
+        img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767742848/tier-lists/tier-accesories_m8qzl3.jpg',
+      },
+      {
+        title: this.transLocoService.translate('tier-lists.card.5.title'),
+        icon: 'fa-paw',
+        description: this.transLocoService.translate('tier-lists.card.5.description'),
+        byName: 'Yanuar',
+        byUrl: 'https://www.facebook.com/yanuar.a.saputra.9',
+        img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767742847/tier-lists/tier-pets_i5hvaq.jpg',
+      },
+      {
+        title: this.transLocoService.translate('tier-lists.card.6.title'),
+        icon: 'fa-hand-fist',
+        description: this.transLocoService.translate('tier-lists.card.6.description'),
+        byName: 'Yanuar',
+        byUrl: 'https://www.facebook.com/yanuar.a.saputra.9',
+        img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767742847/tier-lists/tier-jutsus-power_vovhiu.jpg',
+      },
+      {
+        title: this.transLocoService.translate('tier-lists.card.7.title'),
+        icon: 'fa-hand-fist',
+        description: this.transLocoService.translate('tier-lists.card.7.description'),
+        byName: 'Yanuar',
+        byUrl: 'https://www.facebook.com/yanuar.a.saputra.9',
+        img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767742848/tier-lists/tier-jutsus_k3smco.jpg',
+      },
     ];
   }
 }

@@ -47,13 +47,6 @@ export class MembersService {
         id: 'N/A',
         img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767729612/lotuslegacy/pj_miabdm.png',
         lvl: 90,
-        name: 'alexander',
-        rank: Rank.MEMBER,
-      },
-      {
-        id: 'N/A',
-        img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767729612/lotuslegacy/pj_miabdm.png',
-        lvl: 90,
         name: 'Galaga',
         rank: Rank.MEMBER,
       },

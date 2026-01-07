@@ -65,6 +65,26 @@
              "2": {
                 "title": "Tier dispersible jutsus",
                 "description": "Top of the best dispersible jutsus."
+            },
+            "3": {
+                "title": "Tier jutsus HP reduction",
+                "description": "Top of the best jutsus to reduce HP, very useful against bosses or enemies with a lot of life."
+            },
+            "4": {
+                "title": "Tier accessories",
+                "description": "Top of the best accessories that you can equip on your character, taking into account your element, talent, etc..."
+            },
+            "5": {
+                "title": "Tier pets",
+                "description": "Top of the best pets you can get, remember that each one has different abilities that help both pve and pvp."
+            },
+            "6": {
+                "title": "Tier jutsus damage improvement",
+                "description": "Top of the best jutsus to increase damage."
+            },
+            "7": {
+                "title": "Tier jutsus",
+                "description": "Top of the best jutsus."
             }
         }
     }
