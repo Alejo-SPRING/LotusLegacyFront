@@ -32,6 +32,11 @@ export class Nav {
     });
   }
 
+  public clickChangeLang(lang: string): void {
+    this.changeLang(lang);
+    window.location.reload();
+  }
+
   public changeLang(lang: string): void {
     this.langSelect = lang;
     localStorage.setItem('langSelect', lang);
