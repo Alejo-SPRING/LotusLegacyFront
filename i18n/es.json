@@ -66,6 +66,26 @@
             "2": {
                 "title": "Tier jutsus disperse",
                 "description": "Top de los mejores jutsus dispersables."
+            },
+            "3": {
+                "title": "Tier jutsus redución de HP",
+                "description": "Top de los mejores jutsus para reducir HP, muy útiles contra boss o enemigos con mucha vida."
+            },
+            "4": {
+                "title": "Tier accesorios",
+                "description": "Top de los mejores accesorios que puedes equipar en tu personaje, teniendo en cuenta tu elemento, talento, etc..."
+            },
+            "5": {
+                "title": "Tier mascotas",
+                "description": "Top de las mejores mascotas que puedes obtener, recuerda que cada una tiene habilidades diferentes que ayudan tanto para pve como pvp."
+            },
+            "6": {
+                "title": "Tier jutsus mejora de daño",
+                "description": "Top de los mejores jutsus para incrementar el daño."
+            },
+            "7": {
+                "title": "Tier jutsus",
+                "description": "Top de los mejores jutsus."
             }
         }
     }
