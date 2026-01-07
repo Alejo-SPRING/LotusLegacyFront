@@ -94,7 +94,7 @@ export class MembersService {
       },
       {
         id: 'N/A',
-        img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767729612/lotuslegacy/pj_miabdm.png',
+        img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767749961/lotuslegacy/111braxo111_iq13ty.png',
         lvl: 90,
         name: '111Braxo111',
         rank: Rank.MEMBER,
