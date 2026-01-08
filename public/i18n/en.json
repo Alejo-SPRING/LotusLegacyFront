@@ -89,7 +89,7 @@
             }
         }
     },
-        "recruit-ninjas": {
+    "recruit-ninjas": {
         "title": "List of ninjas",
         "subtitle": "Here you will find the list of ninjas who could help you overcome those difficult missions.",
         "tip": "You can click on the ninja's name to copy their ID!",
