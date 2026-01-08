@@ -1,0 +1,32 @@
+th[sortable] {
+  position: relative;
+  cursor: pointer;
+}
+
+th[sortable].asc::after {
+  content: '▲';
+  margin-left: 8px;
+}
+
+th[sortable].desc::after {
+  content: '▼';
+  margin-left: 8px;
+}
+
+:host ::ng-deep .pagination-primary {
+  .page-link {
+    color: #fff;
+    background-color: #a03939;
+    border-color: #a03939;
+
+    &:hover {
+      background-color: #1d0000;
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: #ee4242;
+    border-color: #ee4242;
+    color: #fff;
+  }
+}

@@ -1,0 +1,132 @@
+<div class="container-fluid px-4 py-5 bg-4">
+  <div class="my-5 py-5 container">
+    <h1 class="display-5 fw-bold text-light py-4 border-bottom">
+      <i class="fa-solid fa-user-ninja tc-1"></i> {{ 'recruit-ninjas.title' | transloco }}
+    </h1>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <p class="lead mb-4 text-light">
+          {{ 'recruit-ninjas.subtitle' | transloco }}
+        </p>
+        <p class="lead mb-4 text-light">
+          <i class="fa-solid fa-lightbulb"></i> {{ 'recruit-ninjas.tip' | transloco }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid px-4 py-5">
+  <div class="row mt-3">
+    <div class="col-12">
+      <form>
+        <div class="mb-3 row">
+          <div class="col-lg-4">
+            <div class="form-floating mb-3">
+              <input
+                id="table-complete-search"
+                type="text"
+                class="form-control bg-3 text-light border-0"
+                name="searchTerm"
+                [placeholder]="'recruit-ninjas.search' | transloco"
+                [formControl]="search"
+              />
+              <label for="table-complete-search" class="text-light"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+                {{ 'recruit-ninjas.search' | transloco }}</label
+              >
+            </div>
+            @if (search.invalid) {
+            <small class="text-danger"
+              ><i class="fa-solid fa-circle-info"></i>
+              {{ 'recruit-ninjas.validError' | transloco }}</small
+            >
+            }
+          </div>
+          @if (search.value) {
+          <div class="col col-form-label">
+            <button
+              type="button"
+              (click)="resetSearch()"
+              class="btn btn-danger rounded-circle btn-lg"
+            >
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+          } @if (service.loading$ | async) {
+          <span class="col col-form-label text-light">{{
+            'recruit-ninjas.loading' | transloco
+          }}</span>
+          }
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover table-striped text-center">
+            <thead>
+              <tr>
+                <th scope="col" class="bg-4 text-light border-0">#</th>
+                <th
+                  scope="col"
+                  class="bg-4 text-light border-0"
+                  sortable="name"
+                  (sort)="onSort($event)"
+                >
+                  <i class="fa-solid fa-user-ninja tc-1"></i>
+                  {{ 'recruit-ninjas.table.title.1' | transloco }}
+                </th>
+                <th
+                  scope="col"
+                  class="bg-4 text-light border-0"
+                  sortable="id"
+                  (sort)="onSort($event)"
+                >
+                  <i class="fa-regular fa-id-card tc-1"></i> Id
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (ninja of ninjas$ | async; track ninja.id) {
+              <tr (click)="copyId(ninja)">
+                <td class="bg-3 text-light border-1 border-danger">{{ $index + 1 }}</td>
+                <td class="bg-3 text-light border-1 border-danger">
+                  <ngb-highlight [result]="ninja.name" [term]="service.searchTerm" />
+                </td>
+                <td class="bg-3 text-light border-1 border-danger">
+                  <ngb-highlight [result]="ninja.id" [term]="service.searchTerm" />
+                </td>
+              </tr>
+              } @empty {
+              <tr class="border-1 border-danger">
+                <td colspan="4" class="text-center bg-3 text-light">
+                  {{ 'recruit-ninjas.notFound' | transloco }}
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+
+        <div class="d-sm-flex justify-content-sm-between p-2">
+          <ngb-pagination
+            [collectionSize]="(total$ | async)!"
+            [(page)]="service.page"
+            [pageSize]="service.pageSize"
+            class="pagination-primary"
+          >
+            <ng-template ngbPaginationPrevious><i class="fa-solid fa-angle-left"></i></ng-template>
+            <ng-template ngbPaginationNext><i class="fa-solid fa-angle-right"></i></ng-template>
+          </ngb-pagination>
+
+          <select
+            class="form-select bg-3 text-light border-0"
+            style="width: auto"
+            name="pageSize"
+            [(ngModel)]="service.pageSize"
+          >
+            <option [ngValue]="10">10 {{ 'recruit-ninjas.table.sizeItems' | transloco }}</option>
+            <option [ngValue]="50">50 {{ 'recruit-ninjas.table.sizeItems' | transloco }}</option>
+            <option [ngValue]="100">100 {{ 'recruit-ninjas.table.sizeItems' | transloco }}</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

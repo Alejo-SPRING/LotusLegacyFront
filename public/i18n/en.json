@@ -8,7 +8,8 @@
             "title": "Menu",
             "btns": {
                 "home": "Start",
-                "members": "Members"
+                "members": "Members",
+                "recruitNinjas": "List ninjas"
             }
         }
     },
@@ -86,6 +87,23 @@
                 "title": "Tier jutsus",
                 "description": "Top of the best jutsus."
             }
+        }
+    },
+        "recruit-ninjas": {
+        "title": "List of ninjas",
+        "subtitle": "Here you will find the list of ninjas who could help you overcome those difficult missions.",
+        "tip": "You can click on the ninja's name to copy their ID!",
+        "search": "Search",
+        "loading": "Loading...",
+        "notFound": "No results found.",
+        "successCopy": "id copped!",
+        "errorCopy": ":( ¡An error occurred try again!",
+        "validError": "¡Enter maximum 100 characters!",
+        "table": {
+            "title": {
+                "1": "Name"
+            },
+            "sizeItems": "items per page"
         }
     }
 }

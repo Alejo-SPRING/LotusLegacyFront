@@ -14,4 +14,9 @@ export const routes: Routes = [
     path: 'tier-lists',
     loadComponent: () => import('./pages/tier-lists/tier-lists').then((c) => c.TierLists),
   },
+  {
+    path: 'recruit-ninjas',
+    loadComponent: () =>
+      import('./pages/recruit-ninjas/recruit-ninjas').then((c) => c.RecruitNinjas),
+  },
 ];

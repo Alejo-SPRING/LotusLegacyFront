@@ -93,7 +93,7 @@ export class MembersService {
         rank: Rank.CO_LEADER,
       },
       {
-        id: 'N/A',
+        id: 'user_PHJSzWtoVtfO',
         img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767749961/lotuslegacy/111braxo111_iq13ty.png',
         lvl: 90,
         name: '111Braxo111',
