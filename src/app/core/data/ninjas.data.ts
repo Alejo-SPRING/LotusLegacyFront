@@ -1,6 +1,14 @@
 import { Ninja } from './../objects/ninja';
 export const NINJAS: Ninja[] = [
   {
+    name: 'Killer1987',
+    id: 'user_EeosMyVErrug',
+  },
+  {
+    name: 'Juubito',
+    id: 'user_mwiy3EQYomus',
+  },
+  {
     name: 'SS_GM-SLAYER',
     id: 'user_PQIU5vTVsPA0',
   },

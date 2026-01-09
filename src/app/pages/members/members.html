@@ -18,7 +18,11 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
         @for (member of members; track $index) {
         <div class="col">
-          <div class="card bg-4 text-light border-0" style="max-width: 340px">
+          <div
+            class="card bg-4 text-light border-0"
+            (click)="copyId(member)"
+            style="max-width: 340px"
+          >
             <div class="position-relative">
               <img
                 [src]="member.img"

@@ -15,6 +15,7 @@ import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angu
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { Clipboard } from '@angular/cdk/clipboard';
 import swal from 'sweetalert2';
+import { AlertService } from '../../core/services/alert.service';
 
 @Component({
   selector: 'app-recruit-ninjas',
@@ -44,7 +45,8 @@ export class RecruitNinjas implements OnInit {
   constructor(
     public service: NinjaService,
     private clipboard: Clipboard,
-    private transLocoService: TranslocoService
+    private transLocoService: TranslocoService,
+    private alertService: AlertService
   ) {
     this.ninjas$ = service.ninjas$;
     this.total$ = service.total$;
@@ -65,24 +67,12 @@ export class RecruitNinjas implements OnInit {
 
   public copyId(ninja: Ninja): void {
     let success: boolean = this.clipboard.copy(ninja.id);
-    const Toast = swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.onmouseenter = swal.stopTimer;
-        toast.onmouseleave = swal.resumeTimer;
-        toast.addEventListener('click', () => swal.close());
-      },
-    });
-    Toast.fire({
-      icon: success ? 'success' : 'error',
-      title: success
-        ? `¡${ninja.name} ${this.transLocoService.translate('recruit-ninjas.successCopy')}!`
+    this.alertService.toast(
+      success
+        ? `¡${ninja.name} ${this.transLocoService.translate('recruit-ninjas.successCopy')}`
         : this.transLocoService.translate('recruit-ninjas.errorCopy'),
-    });
+      success ? 'success' : 'error'
+    );
   }
 
   onSort({ column, direction }: SortEvent) {

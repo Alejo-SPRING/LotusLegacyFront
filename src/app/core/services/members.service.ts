@@ -30,7 +30,7 @@ export class MembersService {
         rank: Rank.CO_LEADER,
       },
       {
-        id: 'N/A',
+        id: 'user_cEpEhJlSjbRF',
         img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767727212/lotuslegacy/kasanova_etlpha.png',
         lvl: 90,
         name: 'LL_Kasanova',
@@ -51,7 +51,7 @@ export class MembersService {
         rank: Rank.MEMBER,
       },
       {
-        id: 'N/A',
+        id: 'user_ATtrDKiXt9M2',
         img: 'https://res.cloudinary.com/duifliwkw/image/upload/v1767729082/lotuslegacy/indra_auhvc6.png',
         lvl: 90,
         name: 'LL_Indra',
